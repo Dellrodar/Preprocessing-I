@@ -222,3 +222,13 @@ html .table-section table,
 body .table-section table {
   margin-top: 1%;
 }
+html footer,
+body footer {
+  text-align: center;
+  vertical-align: middle;
+}
+html footer p,
+body footer p {
+  margin-bottom: 3%;
+  color: cadetblue;
+}
