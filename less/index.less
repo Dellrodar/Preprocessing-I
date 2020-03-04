@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 67.25%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -45,15 +45,115 @@ q:before, q:after {
 }
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	flex-wrap: wrap;
+	text-align: center;
 }
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+	width: 95%;
+	margin: 3%;
+	border: 2px grey solid;
+}
+
+//mix-ins
+.center () {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 html, body {
-    height: 100%;
+
+	nav {
+		display: flex;
+		justify-content: space-evenly;
+	
+		a {
+			text-align: center;
+			border: 2px blueviolet solid;
+	
+		}
+	}
+	
+	
+	.intro {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		border: 2px blue solid;
+	
+		h1 {
+			font-size: 300%;
+			border: 2px green solid;
+		}
+	
+		div {
+			flex-direction: column;
+			.center();
+			border: 2px red solid;
+		}
+	
+		button {
+			height: 15%;
+			width: 20%;
+			margin: 5%;
+			border-radius: 28px;
+			background-image: image();
+			background-color: palevioletred;
+		}
+	}
+	
+	.about-me {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+	
+		h2 {
+			font-size: 225%;
+			margin: 1%;
+		}
+	
+		h3 {
+			font-size: 150%;
+			margin: 1%;
+		}
+	
+		div {
+			.center();
+			text-align: center;
+			flex-direction: column;
+			width: 35%;
+	
+			p {
+				margin: 5%;
+				font-size: large;
+			}
+		}
+	}
+	
+	.table-section {
+		
+		h3 {
+			font-size: 150%;
+			margin: 2% 0;
+		}
+			
+			table { 
+				margin-top: 1%;
+			}
+	}
 }
 
