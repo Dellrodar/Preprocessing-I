@@ -43,17 +43,7 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	flex-wrap: wrap;
-	text-align: center;
-}
 
-td, th {
-	border: 1px solid #dddddd;
-	text-align: left;
-	padding: 8px;
-  }
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -79,6 +69,9 @@ html, body {
 	nav {
 		display: flex;
 		justify-content: space-evenly;
+		background-color: blanchedalmond;
+		margin-bottom: 2%;
+		border-bottom: 1px solid black;
 	
 		a {
 			text-align: center;
@@ -92,7 +85,7 @@ html, body {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
-		border: 2px blue solid;
+		border-bottom: 5px solid black;
 	
 		h1 {
 			font-size: 300%;
@@ -103,7 +96,14 @@ html, body {
 			flex-direction: column;
 			.center();
 			border: 2px red solid;
+			margin-bottom: 2%;
 		}
+
+		img {
+			margin: 2% 0;
+		}
+
+
 	
 		button {
 			height: 15%;
@@ -120,10 +120,15 @@ html, body {
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-around;
+		border-bottom: 5px solid black;
 	
 		h2 {
 			font-size: 225%;
 			margin: 1%;
+			text-decoration: underline;
+			border: 2px solid green;
+			background-color: palegreen;
+			border-radius: 12px;
 		}
 	
 		h3 {
@@ -135,7 +140,7 @@ html, body {
 			.center();
 			text-align: center;
 			flex-direction: column;
-			width: 35%;
+			width: 49%;
 	
 			p {
 				margin: 5%;
@@ -145,6 +150,7 @@ html, body {
 	}
 	
 	.table-section {
+		margin-bottom: 2%;
 		
 		h3 {
 			font-size: 150%;
@@ -157,7 +163,20 @@ html, body {
 	}
 
 	.work-history {
-		
+		width: 100%;
+		text-align: center;
+
+		h3 {
+			font-size: 150%;
+			margin: 2% 0;
+		}
+
+		table {
+			width: 100%;
+			margin-top: 7%;
+		}
+
+	
 	}
 
 	footer {
@@ -171,6 +190,25 @@ html, body {
 		}
 	}
 
+	table {
+		border-collapse: collapse;
+		flex-wrap: wrap;
+		text-align: center;
+	}
 	
+	td {
+		border: 3px solid grey;
+		text-align: left;
+		padding: 8px;
+		}
+	 
+	th {
+		border: 3px solid grey;
+		text-align: left;
+		padding: 8px;
+		background-color: paleturquoise;
+		text-transform: capitalize;
+	}
+
 }
 
