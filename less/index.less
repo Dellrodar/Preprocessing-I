@@ -51,12 +51,6 @@ q:before, q:after {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container {
-	width: 95%;
-	margin: 3%;
-	border: 2px grey solid;
-}
-
 //mix-ins
 .center () {
 	display: flex;
@@ -64,7 +58,29 @@ q:before, q:after {
 	align-items: center;
 }
 
+.mobile-img () {
+	height: 150px;
+	width: auto;
+}
+
+//vars
+@margin-standard: 2%;
+@seperator: 5px solid black;
+
+.container {
+	width: 95%;
+	margin: 3%;
+	border: 2px grey solid;
+}
+
 html, body {
+	background-color: lightcyan;
+
+	@media (max-width:500px) {
+	
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
 
 	nav {
 		display: flex;
@@ -75,8 +91,6 @@ html, body {
 	
 		a {
 			text-align: center;
-			border: 2px blueviolet solid;
-	
 		}
 	}
 	
@@ -85,34 +99,42 @@ html, body {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
-		border-bottom: 5px solid black;
+		border-bottom: @seperator;
 	
 		h1 {
 			font-size: 300%;
-			border: 2px green solid;
+			@media (max-width:500px) {
+				font-size: 150%;
+			}
 		}
 	
 		div {
 			flex-direction: column;
 			.center();
-			border: 2px red solid;
 			margin-bottom: 2%;
 		}
 
 		img {
 			margin: 2% 0;
+			@media (max-width:500px) {
+				.mobile-img();
+			}
 		}
 
 
-	
-		button {
-			height: 15%;
-			width: 20%;
-			margin: 5%;
-			border-radius: 28px;
-			background-image: image();
-			background-color: palevioletred;
-		}
+				.button {
+					background-color: #1c87c9;
+					border: none;
+					color: white;
+					padding: 3% 5%;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 20px;
+					margin: 5% 3%;
+					cursor: pointer;	
+				}
+				
 	}
 	
 	.about-me {
@@ -120,15 +142,18 @@ html, body {
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-around;
-		border-bottom: 5px solid black;
+		border-bottom: @seperator;
 	
 		h2 {
 			font-size: 225%;
 			margin: 1%;
 			text-decoration: underline;
-			border: 2px solid green;
 			background-color: palegreen;
-			border-radius: 12px;
+
+			@media (max-width:500px) {
+				font-size: 150%;
+			}
+			
 		}
 	
 		h3 {

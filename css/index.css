@@ -132,6 +132,17 @@ q:after {
   margin: 3%;
   border: 2px grey solid;
 }
+html,
+body {
+  background-color: lightcyan;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 html nav,
 body nav {
   display: flex;
@@ -143,7 +154,6 @@ body nav {
 html nav a,
 body nav a {
   text-align: center;
-  border: 2px blueviolet solid;
 }
 html .intro,
 body .intro {
@@ -155,7 +165,12 @@ body .intro {
 html .intro h1,
 body .intro h1 {
   font-size: 300%;
-  border: 2px green solid;
+}
+@media (max-width: 500px) {
+  html .intro h1,
+  body .intro h1 {
+    font-size: 150%;
+  }
 }
 html .intro div,
 body .intro div {
@@ -163,21 +178,31 @@ body .intro div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px red solid;
   margin-bottom: 2%;
 }
 html .intro img,
 body .intro img {
   margin: 2% 0;
 }
-html .intro button,
-body .intro button {
-  height: 15%;
-  width: 20%;
-  margin: 5%;
-  border-radius: 28px;
-  background-image: image();
-  background-color: palevioletred;
+@media (max-width: 500px) {
+  html .intro img,
+  body .intro img {
+    height: 150px;
+    width: auto;
+  }
+}
+html .intro .button,
+body .intro .button {
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 3% 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5% 3%;
+  cursor: pointer;
 }
 html .about-me,
 body .about-me {
@@ -192,9 +217,13 @@ body .about-me h2 {
   font-size: 225%;
   margin: 1%;
   text-decoration: underline;
-  border: 2px solid green;
   background-color: palegreen;
-  border-radius: 12px;
+}
+@media (max-width: 500px) {
+  html .about-me h2,
+  body .about-me h2 {
+    font-size: 150%;
+  }
 }
 html .about-me h3,
 body .about-me h3 {
