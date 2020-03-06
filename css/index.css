@@ -1,1 +1,304 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 67.25%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.container {
+  width: 95%;
+  margin: 3%;
+  border: 2px grey solid;
+}
+html,
+body {
+  background-color: lightcyan;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+html nav,
+body nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: blanchedalmond;
+  margin-bottom: 2%;
+  border-bottom: 1px solid black;
+}
+html nav a,
+body nav a {
+  text-align: center;
+}
+html .intro,
+body .intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 5px solid black;
+}
+html .intro h1,
+body .intro h1 {
+  font-size: 300%;
+}
+@media (max-width: 500px) {
+  html .intro h1,
+  body .intro h1 {
+    font-size: 150%;
+  }
+}
+html .intro div,
+body .intro div {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+html .intro img,
+body .intro img {
+  margin: 2% 0;
+}
+@media (max-width: 500px) {
+  html .intro img,
+  body .intro img {
+    height: 150px;
+    width: auto;
+  }
+}
+html .intro .button,
+body .intro .button {
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 3% 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5% 3%;
+  cursor: pointer;
+}
+html .about-me,
+body .about-me {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 5px solid black;
+}
+html .about-me h2,
+body .about-me h2 {
+  font-size: 225%;
+  margin: 1%;
+  text-decoration: underline;
+  background-color: palegreen;
+}
+@media (max-width: 500px) {
+  html .about-me h2,
+  body .about-me h2 {
+    font-size: 150%;
+  }
+}
+html .about-me h3,
+body .about-me h3 {
+  font-size: 150%;
+  margin: 1%;
+}
+html .about-me div,
+body .about-me div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 49%;
+}
+html .about-me div p,
+body .about-me div p {
+  margin: 5%;
+  font-size: large;
+}
+html .table-section,
+body .table-section {
+  margin-bottom: 2%;
+}
+html .table-section h3,
+body .table-section h3 {
+  font-size: 150%;
+  margin: 2% 0;
+}
+html .table-section table,
+body .table-section table {
+  margin-top: 1%;
+}
+html .work-history,
+body .work-history {
+  width: 100%;
+  text-align: center;
+}
+html .work-history h3,
+body .work-history h3 {
+  font-size: 150%;
+  margin: 2% 0;
+}
+html .work-history table,
+body .work-history table {
+  width: 100%;
+  margin-top: 7%;
+}
+html footer,
+body footer {
+  text-align: center;
+  vertical-align: middle;
+}
+html footer p,
+body footer p {
+  margin-bottom: 3%;
+  color: cadetblue;
+}
+html table,
+body table {
+  border-collapse: collapse;
+  flex-wrap: wrap;
+  text-align: center;
+}
+html td,
+body td {
+  border: 3px solid grey;
+  text-align: left;
+  padding: 8px;
+}
+html th,
+body th {
+  border: 3px solid grey;
+  text-align: left;
+  padding: 8px;
+  background-color: paleturquoise;
+  text-transform: capitalize;
+}
